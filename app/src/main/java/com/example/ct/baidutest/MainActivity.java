@@ -66,6 +66,19 @@ public class MainActivity extends AppCompatActivity {
         mBaiduMap.setMapStatus(mapStatusUpdatePoint);
 
 
+
+/*
+        //获取当前角度    设置俯角 overlook 一样
+        MapStatus status=mBaiduMap.getMapStatus();
+        float rotate=status.rotate;
+        //旋转0-360度
+        MapStatus mapStatus=new MapStatus.Builder().rotate(12).build();
+        MapStatusUpdate update = MapStatusUpdateFactory.newMapStatus(mapStatus);
+*/
+        //设置地图放大缩小
+        MapStatusUpdate statusUpdate=MapStatusUpdateFactory.zoomIn();//放大  缩小是 zoomOut
+        mBaiduMap.setMapStatus(statusUpdate);
+
         setMapType(mBaiduMap);
 
         //开启交通图
