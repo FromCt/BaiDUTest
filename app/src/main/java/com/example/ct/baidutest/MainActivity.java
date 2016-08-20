@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         MapStatusUpdate mapStatusUpdatePoint =MapStatusUpdateFactory.newLatLng( new LatLng(39.963175, 116.400244));
         mBaiduMap.setMapStatus(mapStatusUpdatePoint);
 
+        com.example.ct.ctlibrary.util.MyLog.i("","");
 
 
 /*
