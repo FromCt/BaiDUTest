@@ -6,4 +6,6 @@
     添加旋转。地图放大缩小。
     MainActivity 71-80 行。
 
+2、0  测试android studio commit
+
 
