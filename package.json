@@ -1,0 +1,22 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "react移动端开发。浏览器访问，或 打包app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FromCt/react_mobel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FromCt/react_mobel/issues"
+  },
+  "homepage": "https://github.com/FromCt/react_mobel#readme",
+  "dependencies": {
+    "antd-mobile": "^2.2.11"
+  }
+}

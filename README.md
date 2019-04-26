@@ -1,11 +1,7 @@
-# BaiDUTest
-	this is my baidu demo
-	first commit and push
+# react_mobel 
 
-1、07、18.03.33
-    添加旋转。地图放大缩小。
-    MainActivity 71-80 行。
+    react移动端开发。浏览器访问，或 打包app
 
-2、0  测试android studio commit
+## 使用 antd mobile
 
-
+npm install -g create-react-app
