@@ -2,40 +2,61 @@ var path = require("path")
 var HtmlWbpackPlugin = require("html-webpack-plugin");
 
 const htmlplugin = new HtmlWbpackPlugin({
-    template:path.join(__dirname,"./src/index.html"),
-    filename:"index.html"
+    template: path.join(__dirname, "./src/index.html"),
+    filename: "index.html"
 })
 
 
 
 module.exports = {
 
-    mode:"development",
+    mode: "development",
 
-    plugins:[htmlplugin],
+    plugins: [htmlplugin],
 
 
 
-    module:{
+    module: {
 
-        rules:[
+        rules: [
             {
-                test:/\.js|jsx/,
-                use:'babel-loader',
-                exclude:/node_modules/
+                test: /\.js|jsx/,
+                use: 'babel-loader',
+                exclude: /node_modules/
             },
             {
                 test: /\.css$/,
-                use:[
-                  {
-                    loader: 'style-loader'
-                  },
-                  {
-                    loader: 'css-loader'
-                  }
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    }
                 ]
-              }
-            ]
+            },
+            {
+                test: /\.less$/,
+                exclude: '/node_modules',
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    {
+                        loader: 'less-loader',  // 
+                        options: {
+                            importLoaders: 1
+                        }
+                    }
+                ]
+            }
+        ]
 
     }
 
