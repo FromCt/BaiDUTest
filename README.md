@@ -6,15 +6,15 @@
 
 ## 准备
     npm init 初始化项目
-
-
-
     npm install html-webpack-plugin
-
-
     npm install react react-dom --save --dev
     babel-loader
     babel-core
+
+
+    css
+
+        css-loader style-loader
 ## 使用 antd mobile
 
 
