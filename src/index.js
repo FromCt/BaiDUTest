@@ -3,16 +3,14 @@ import React from 'react';
 import ReactDom from 'react-dom'
 
 import MyButton from './components/button.jsx';
+import MyTabBar from './components/myTabBar.jsx'
 
 
 console.log("this is index.js")
 
-const content = <div>this is content
+const content = <MyTabBar></MyTabBar>
 
-    <p><MyButton></MyButton></p>
-</div>
-
-const myApp = React.createElement("div",null,content)
+const myApp = React.createElement("div", null, content)
 
 
-ReactDom.render(myApp,document.querySelector("#app"))
+ReactDom.render(content, document.querySelector("#app"))
