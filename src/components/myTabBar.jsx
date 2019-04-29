@@ -1,6 +1,10 @@
 
 import React from 'react'
 import { TabBar } from 'antd-mobile';
+import { NavLink } from 'react-router-dom';
+import PageA from '../pages/pageA.jsx'
+import PageB from '../pages/pageB.jsx'
+
 
 
 
@@ -9,7 +13,7 @@ class MyTabBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'redTab',
+            selectedTab: 'blueTab',
             hidden: false,
             fullScreen: true,
         };
@@ -18,6 +22,19 @@ class MyTabBar extends React.Component {
     renderContent(pageText) {
         return (
             <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
+
+                <div>
+
+                    <NavLink to='/pageA'>pageA</NavLink>
+                    <NavLink to='/pageB'>pageB</NavLink>
+                    <NavLink to='/react' activeClassName='active'>404</NavLink>
+
+                    <p>
+                        <NavLink to='/redirect' activeClassName='active'>Redirect</NavLink>
+                    </p>
+                </div>
+
+
                 <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
                 <a style={{ display: 'block', marginTop: 40, marginBottom: 20, color: '#108ee9' }}
                     onClick={(e) => {
@@ -76,9 +93,8 @@ class MyTabBar extends React.Component {
                                 selectedTab: 'blueTab',
                             });
                         }}
-                        data-seed="logId"
-                    >
-                        {this.renderContent('Life')}
+                        data-seed="logId">
+                        <PageB  {...this.props}></PageB>
                     </TabBar.Item>
                     <TabBar.Item
                         icon={
@@ -108,7 +124,7 @@ class MyTabBar extends React.Component {
                         }}
                         data-seed="logId1"
                     >
-                        {this.renderContent('Koubei')}
+                        <PageA {...this.props}></PageA>
                     </TabBar.Item>
                     <TabBar.Item
                         icon={
