@@ -11,11 +11,17 @@ const htmlplugin = new HtmlWbpackPlugin({
 module.exports = {
 
     mode: "development",
-
     plugins: [htmlplugin],
 
-
-
+    devServer: {
+        proxy: {
+            '/': {
+                target: 'http://img.cq.ct10000.com',
+                secure: true,
+                changeOrigin: true
+            }
+        }
+    },
     module: {
 
         rules: [
@@ -44,8 +50,8 @@ module.exports = {
 
     },
 
-    devServer: {
-        historyApiFallback: true
-    }
+    // devServer: {
+    //     historyApiFallback: true
+    // }
 
 }

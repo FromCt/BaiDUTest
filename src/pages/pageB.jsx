@@ -24,25 +24,14 @@ export default class jsdemo extends React.Component {
                 versionCode: 106 //外呼云app新增语音验证结果
             };
 
-            window._ecsc.get("http://img.cq.ct10000.com/img-manager/apk/updateCommon",
+            window._ecsc.get("/img-manager/apk/updateCommon",
                 wgtVer,
                 function (jsonData) {
-                    window.mui.toast("success")
+
                     that.setState({
                         message: JSON.stringify(jsonData)
                     })
-                    if (jsonData.success) {
-                        var record = jsonData.record;
-                        var newVersion = parseInt(record.number);
-                        console.log(JSON.stringify(wgtVer));
-                        console.log(newVersion);
 
-                        that.props.history.push("/newWebView", { name: "ct" })
-
-                    } else {
-                        window.mui.toast("升级接口调用失败")
-                        return;
-                    }
                 })
 
 
