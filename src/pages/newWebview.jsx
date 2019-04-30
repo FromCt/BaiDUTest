@@ -10,10 +10,14 @@ export default class jsdemo extends React.Component {
     }
 
     onLeftClick = () => {
-        console.log("onLeftClick", window.mui);
+        console.log("onLeftClick");
 
         window.history.back();
 
+    }
+    componentDidMount() {
+        //设置页面返回 不可关闭应用
+        window._ecsc.quitAble = false
     }
 
 

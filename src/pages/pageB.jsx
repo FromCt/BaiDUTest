@@ -60,7 +60,7 @@ export default class jsdemo extends React.Component {
     render() {
         return (
             <div>
-
+                <p> page B</p>
                 <button onClick={this.clickRight}>网络请求</button>
                 <p style={{ width: "100%" }}>
                     {this.state.message}
