@@ -1,8 +1,28 @@
 
+// p{
+//     background: red;
 
-.tanstionDemo{
+// }
 
+.tanstionDemo {
     width: 100%;
     height: 100%;
-    background: pink;
-}
+    background: blue;
+    top:0;
+    position: absolute;
+    animation: move .5s cubic-bezier(0.075, 0.82, 0.165, 1)
+    /* animation: move; */
+  }
+  
+  @keyframes move{
+      0% {
+        opacity: 0;
+        left: 100%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+    
+  }
+  

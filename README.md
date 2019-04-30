@@ -184,6 +184,27 @@ js 中可以写入html标签 的语法。js 文件中默认不能 写html 语法
 
         css-loader style-loader
 
+### less 模块配置 https://www.jianshu.com/p/98f30231872b
+
+    安装less:  npm install less less-loader --save-dev
+
+    第一：改webpack.config.dev.js文件：找到module的rules规则配置
+
+            1）test: /\.css$/改成 test: /\.(css|less)$/
+            2）在use数组末尾添加一项： { loader: require.resolve('less-loader')}
+
+
+    第二：改 webpack.config.prod.js文件：找到module的rules规则配置
+                
+            1）test: /\.css$/改成 test: /\.(css|less)$/
+            2）在use数组末尾添加一项： { loader: require.resolve('less-loader')}
+
+
+    less语法：https://www.cnblogs.com/haoyijing/p/5793788.html
+
+    注： 没有支持到局部样式。 cssmodule
+
+
 ## 使用 antd mobile
 
 ## 添加 路由

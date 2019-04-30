@@ -25,37 +25,21 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader'
-                    }
-                ]
-            },
-            {
-                test: /\.less$/,
-                exclude: '/node_modules',
+                test: /\.(css|less)$/,
                 use: [
                     {
                         loader: 'style-loader'
                     },
                     {
                         loader: 'css-loader',
-                        options: {
-                            importLoaders: 1
-                        }
+
                     },
                     {
-                        loader: 'less-loader',  // 
-                        options: {
-                            importLoaders: 1
-                        }
+                        loader: require.resolve('less-loader')
                     }
                 ]
             }
+
         ]
 
     },

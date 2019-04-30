@@ -1,7 +1,10 @@
 import React from 'react';
 import { NavBar, Icon } from 'antd-mobile';
-require('./test.css')
+
 //import styles from './test.less'
+import './test.less'
+
+//console.log("styles========", styles)
 
 export default class jsdemo extends React.Component {
 
@@ -24,6 +27,7 @@ export default class jsdemo extends React.Component {
 
     render() {
         return (
+            // <div className={styles.tanstionDemo}>
             <div className="tanstionDemo">
                 <NavBar
                     mode="light"

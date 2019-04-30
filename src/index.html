@@ -18,7 +18,7 @@
 
     document.addEventListener('plusready', function () {
         console.log("mui plusready===========")
-        window._ecsc.quitAble = true
+        window._ecsc.quitAble = true //首页设置页面返回可关闭应用
         mui.toast('登陆成功', { duration: 'long', })
     })
 
@@ -26,10 +26,6 @@
 
         if (window.plus) {
             console.log("判断是移动设备")
-
-            //window.plus.nativeUI.alert("请输入验证码");
-
-
             var first = null;
             window.mui.back = function () {
 
@@ -54,8 +50,6 @@
         }
 
     }, 1000)
-
-
 
 
 </script>
